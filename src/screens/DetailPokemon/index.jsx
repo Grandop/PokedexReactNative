@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { Text , View, Image} from "react-native";
+
 import styles from "./style";
 
 export default function DetailPokemon({route}) {
@@ -20,7 +21,7 @@ export default function DetailPokemon({route}) {
   }, [])
 
   return (
-    <>
+    <View style={styles.backgroundView}>
       <View style={styles.container}>
           <Text
           style={styles.pokemonName}
@@ -35,10 +36,10 @@ export default function DetailPokemon({route}) {
       <View style={styles.footerView}>
       {pokemonStats.map(({stat, base_stat}) => (
         <>
-          <Text style={styles.textStats} >{stat.name}: {base_stat}</Text>
+          <Text style={styles.textStats}>{stat.name}: {base_stat}</Text>
         </>
       ))}
       </View>
-    </>
+    </View>
   );
 }

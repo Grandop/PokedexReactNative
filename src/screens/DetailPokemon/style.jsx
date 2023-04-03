@@ -1,12 +1,17 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  backgroundView: {
+    backgroundColor: "#fff",
+  },
   container: {
     backgroundColor: "#e76f51",
     height: "50%",
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50,
   },
   pokemonName: {
     textTransform: "capitalize",
@@ -32,7 +37,7 @@ const styles = StyleSheet.create({
     height: "50%",
     justifyContent: "center",
     alignItems: "flex-start",
-    paddingLeft: 100,
+    paddingLeft: 85,
   },
   textStats: {
     color: "black",

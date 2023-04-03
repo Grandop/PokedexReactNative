@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Text, FlatList, Image, TouchableOpacity} from "react-native";
+
 import styles from "./style";
 
 export default function Pokemons({navigation}) {

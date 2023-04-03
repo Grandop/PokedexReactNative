@@ -1,12 +1,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { View } from 'react-native';
-import Title from '../Title';
-import styles from './style';
-import Pokemons from '../Pokemons';
-import DetailPokemon from "../../screens/DetailPokemon";
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+
+import Pokemons from '../Pokemons';
+import DetailPokemon from "../../screens/DetailPokemon";
 
 const Stack = createStackNavigator();
 
@@ -41,10 +39,3 @@ export default function App() {
     </NavigationContainer> 
   );
 }
-
-// <View>
-// <Title/>
-// <View style={styles.container}>
-//   <Pokemons/>
-// </View>
-// </View>
