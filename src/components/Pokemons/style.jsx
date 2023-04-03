@@ -1,6 +1,22 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    bgView: {
+        backgroundColor: "#e76f51",
+    },
+    textInputArea: {
+        backgroundColor: "white",
+        marginVertical: 20,
+        marginHorizontal: 20,
+        height: 50,
+        justifyContent: "center",
+        borderRadius: 20,
+        paddingLeft: 10,
+        borderWidth: 2,
+    },
+    textInput: {
+        color: "black",
+    },
     flatListStyle: {
         backgroundColor: "#e76f51",
     },

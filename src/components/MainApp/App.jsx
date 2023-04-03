@@ -18,8 +18,7 @@ export default function App() {
           headerStyle: {
             backgroundColor: "#e76f51",
           },
-          headerTransparent: 0,
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
         }}
         name='Pokemons' 
         component={Pokemons}/>

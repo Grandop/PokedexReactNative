@@ -36,7 +36,7 @@ export default function DetailPokemon({route}) {
       <View style={styles.footerView}>
       {pokemonStats.map(({stat, base_stat}) => (
         <>
-          <Text style={styles.textStats}>{stat.name}: {base_stat}</Text>
+          <Text style={styles.textStats}> {stat.name}: {base_stat}</Text>
         </>
       ))}
       </View>
