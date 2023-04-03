@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { View, Text, FlatList, Image, TouchableOpacity} from "react-native";
+import {Text, FlatList, Image, TouchableOpacity} from "react-native";
 import styles from "./style";
 
 export default function Pokemons({navigation}) {
@@ -37,7 +37,8 @@ useEffect(() => {
         onPress={() => navigation.navigate("DetailPokemon", 
         {
           pokemonPhoto: getPokemonImage(item.url), 
-          name: item.name
+          name: item.name,
+          url: item.url
         }
         )}
         style={styles.flatListCell}>

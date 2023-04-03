@@ -21,6 +21,7 @@ export default function App() {
             backgroundColor: "#e76f51",
           },
           headerTransparent: 0,
+          headerTitleAlign: "center"
         }}
         name='Pokemons' 
         component={Pokemons}/>
@@ -31,7 +32,8 @@ export default function App() {
             backgroundColor: "#e76f51",
           },
           headerTintColor: "black",
-          headerBackTitle: " "
+          headerBackTitle: " ",
+          headerTitleAlign: "center"
         }}
         name='DetailPokemon' 
         component={DetailPokemon}/>

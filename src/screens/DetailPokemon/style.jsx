@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     textTransform: "capitalize",
     fontSize: 25,
     fontWeight: "bold",
+    color: "black",
   },
   pokemonBgView: {
     marginTop: 20,
@@ -25,6 +26,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 200,
     width: 200,
+  },
+  footerView: {
+    backgroundColor: "#fff",
+    height: "50%",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    paddingLeft: 100,
+  },
+  textStats: {
+    color: "black",
+    fontSize: 25,
+    textTransform: "capitalize",
+    marginBottom: 10,
   }
 });
 
