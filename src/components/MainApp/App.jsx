@@ -5,7 +5,6 @@ import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Pokemons from '../Pokemons';
 import DetailPokemon from "../../screens/DetailPokemon";
