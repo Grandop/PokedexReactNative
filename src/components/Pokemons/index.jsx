@@ -6,12 +6,11 @@ import styles from "./style";
 
 export default function Pokemons({navigation}) {
 const [pokemonData, setPokemonData] = useState([])
-
 const [searchText, setSearchText] = useState("")
 
 const getPokemons = async () => {
   let baseURL= "https://pokeapi.co/api/v2";
-  let endPoint = "/pokemon?limit=100";
+  let endPoint = "/pokemon?limit=200";
   try {
     const response = await fetch(`${baseURL}${endPoint}`);
     const json = await response.json();
@@ -45,22 +44,6 @@ const filterPokemons = (text) => {
     );
   }
 } 
-
-const filterPdddokemons = (text) => {
-  if(text === "") {
-    setPokemonData(pokemonData);
-  } else if(text != ""){  
-    const newData = pokemonData.filter(item => {
-      const itemData = item.name.first ? item.name.first.toUpperCase() : ''.toUpperCase();
-      const textData = text.toUpperCase();
-      return itemData.indexOf(textData) > -1;
-    })
-    setPokemonData(newData);
-  } else {
-    setPokemonData(pokemonData);
-  }
-} 
-
 
   return (
     <View style={styles.bgView}>
