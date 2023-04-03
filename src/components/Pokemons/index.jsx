@@ -10,7 +10,6 @@ import {
 
 import styles from "./style";
 
-
 export default function Pokemons({navigation}) {
 const [pokemonData, setPokemonData] = useState([])
 const [searchText, setSearchText] = useState("")

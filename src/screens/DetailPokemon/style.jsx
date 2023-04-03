@@ -18,6 +18,21 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "bold",
     color: "black",
+    marginLeft: 20,
+  },
+  namePokemonView: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  favoriteIconView: {
+    width: 30,
+    height: 30,
+  },
+  favoriteIcon: {
+    width: 30,
+    height: 30,
+    marginRight: 0,
+    marginLeft: 90,
   },
   pokemonBgView: {
     marginTop: 20,
