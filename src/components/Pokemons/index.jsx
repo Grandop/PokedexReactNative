@@ -37,10 +37,8 @@ const filterPokemons = (text) => {
     setSearchText(
       pokemonData.filter((item) => {
         if(item.name.indexOf(text.toLowerCase()) > -1) {
-          console.log("cai no true")
           return true;
         } else {
-          console.log("cai no false")
           return false;
         }
       })
