@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from "react";
-import {Text, FlatList, Image, TouchableOpacity, View, TextInput} from "react-native";
+import {
+  Text, 
+  FlatList, 
+  Image, 
+  TouchableOpacity, 
+  View, 
+  TextInput
+} from "react-native";
 
 import styles from "./style";
 
@@ -14,6 +21,7 @@ const getPokemons = async () => {
   try {
     const response = await fetch(`${baseURL}${endPoint}`);
     const json = await response.json();
+    setSearchText(json.results);
     setPokemonData(json.results);
   } catch (error) {
     console.log(error);
