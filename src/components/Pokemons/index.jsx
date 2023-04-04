@@ -8,6 +8,11 @@ import {
   TextInput
 } from "react-native";
 
+import { 
+  PokemonName, 
+  PokemonImage, 
+  PokemonURL 
+} from "../../contexts/pokemonInfos";
 import styles from "./style";
 
 export default function Pokemons({navigation}) {
@@ -36,7 +41,7 @@ useEffect(() => {
   getPokemons();
 }, []);
 
-const filterPokemons = (text) => {
+const searchPokemons = (text) => {
   if(text.toLowerCase() === "") {
     setSearchText(pokemonData);
   } else {
@@ -60,7 +65,7 @@ const filterPokemons = (text) => {
         placeholder="Pesquise um pokemon"
         placeholderTextColor="black"
         value={searchText}
-        onChangeText={(userText) => filterPokemons(userText)}
+        onChangeText={(userText) => searchPokemons(userText)}
         />
       </View>
       <FlatList 

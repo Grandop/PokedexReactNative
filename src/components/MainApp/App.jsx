@@ -38,7 +38,7 @@ function Tabs() {
         tabBarActiveTintColor: "#e76f51",
         tabBarIcon: () => {
           return (
-            <Image style={styles.tabIconStar} source={require("../../assets/star.png")}/>
+            <Image style={styles.tabIconStar} source={require("../../assets/starIcon.png")}/>
           );
         },
       }}

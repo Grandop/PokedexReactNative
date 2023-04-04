@@ -2,12 +2,12 @@ import React, { useState, useEffect} from "react";
 import { Text , View, Image, TouchableOpacity} from "react-native";
 
 import styles from "./style";
-import star from "../../assets/star.png"
-import starClear from "../../assets/starClear.png"; 
+import star from "../../assets/starIcon.png"
+import starClearIcon from "../../assets/starClearIcon.png"; 
 
 export default function DetailPokemon({route}) {
   const [pokemonStats, setStats] = useState([])
-  const [starIcon, setIcon] = useState(starClear)
+  const [starIcon, setIcon] = useState(starClearIcon)
 
   const getPokemonStats = async () => {
     try {
@@ -33,10 +33,10 @@ export default function DetailPokemon({route}) {
           <TouchableOpacity
           style={styles.favoriteIconView}
           onPress={() => {
-            if(starIcon === starClear){
+            if(starIcon === starClearIcon) {
               setIcon(star)
             } else {
-              setIcon(starClear)
+              setIcon(starClearIcon)
             }
           }}
           >
