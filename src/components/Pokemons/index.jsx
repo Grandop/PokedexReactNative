@@ -7,6 +7,7 @@ import {
   View, 
   TextInput
 } from "react-native";
+import axios from "axios";
 
 import { 
   PokemonName, 
@@ -16,6 +17,8 @@ import {
 import styles from "./style";
 
 export default function Pokemons({navigation}) {
+const { navigate } = navigation
+
 const [pokemonData, setPokemonData] = useState([])
 const [searchText, setSearchText] = useState("")
 
@@ -30,6 +33,11 @@ const getPokemons = async () => {
   } catch (error) {
     console.log(error);
   }
+  // const { data } = await axios.get(`${baseURL}${endPoint}`)
+  // setPokemonData(data);
+  // setSearchText(data);
+  // console.log(pokemonData)
+  // console.log(se)
 };
 
 const getPokemonImage = (url) => {
@@ -47,7 +55,7 @@ const searchPokemons = (text) => {
   } else {
     setSearchText(
       pokemonData.filter((item) => {
-        if(item.name.indexOf(text.toLowerCase()) > -1) {
+        if(item.name.includes(text.toLowerCase())) {
           return true;
         } else {
           return false;
@@ -72,10 +80,11 @@ const searchPokemons = (text) => {
         style={styles.flatListStyle}
         showsVerticalScrollIndicator={false}
         data={searchText}
+        keyExtractor={item => item.id}
         renderItem={({item}) => {
           return(
           <TouchableOpacity 
-          onPress={() => navigation.navigate("DetailPokemon", 
+          onPress={() => navigate("DetailPokemon", 
           {
             pokemonPhoto: getPokemonImage(item.url), 
             name: item.name,

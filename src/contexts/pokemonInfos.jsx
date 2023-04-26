@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-export const PokemonName = createContext();
-export const PokemonImage = createContext();
-export const PokemonURL = createContext();
+export const PokemonContext = createContext();
+
+export function PokemonContextProvider() 

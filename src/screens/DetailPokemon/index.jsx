@@ -5,6 +5,8 @@ import styles from "./style";
 import star from "../../assets/starIcon.png"
 import starClearIcon from "../../assets/starClearIcon.png"; 
 
+import axios from "axios";
+
 export default function DetailPokemon({route}) {
   const [pokemonStats, setStats] = useState([])
   const [starIcon, setIcon] = useState(starClearIcon)
